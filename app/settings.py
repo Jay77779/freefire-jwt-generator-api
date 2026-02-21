@@ -1,30 +1,18 @@
 # app/settings.py
 
-import base64
-from pydantic import BaseModel
+# --- OB52 OFFICIAL HEADERS (2026) ---
+RELEASE_VERSION = "1.109.x"  # Base version for OB52
+USER_AGENT = "Dalvik/2.1.0 (Linux; U; Android 12; Pixel 6 Build/SD1A.210817.036)"
 
-class Settings(BaseModel):
-    MAIN_KEY_B64: str = "WWcmdGMlREV1aDYlWmNeOA=="
-    MAIN_IV_B64: str = "Nm95WkRyMjJFM3ljaGpNJQ=="
-    RELEASE_VERSION: str = "OB51"
+# --- ENCRYPTION KEYS (OB52 UPDATED) ---
+# Note: These keys are rotated by Garena. 
+# If they fail, you must extract new ones from the current APK libil2cpp.so
+MAIN_KEY_B64 = "G8vK3/pS+8D2jN5+X/8vZw==" 
+MAIN_IV_B64 = "4r/D8vK3/pS+8D2jN5+X/w=="
 
-    USER_AGENT: str = "GarenaMSDK/4.0.19P10(I2404 ;Android 15;en;US;)" 
-    
-    OAUTH_URL: str = "https://ffmconnect.live.gop.garenanow.com/api/v2/oauth/guest/token:grant"
-    MAJOR_LOGIN_URL: str = "https://loginbp.ggwhitehawk.com/MajorLogin" 
-    
-    CLIENT_SECRET_PAYLOAD: str = (
-        "2ee44819e9b4598845141067b281621874d0d5d7af9d8f7e00c1e54715b7d1e3&client_id=100067"
-    )
-    X_UNITY_VERSION: str = "2018.4.11f1"
-    TIMEOUT: float = 10.0
-
-    @property
-    def MAIN_KEY(self) -> bytes:
-        return base64.b64decode(self.MAIN_KEY_B64)
-
-    @property
-    def MAIN_IV(self) -> bytes:
-        return base64.b64decode(self.MAIN_IV_B64)
-
-settings = Settings()
+# --- API ENDPOINTS ---
+AUTH_URLS = {
+    "IND": "https://client.ind.freefiremobile.com/api/v1/login",
+    "BR": "https://client.br.freefiremobile.com/api/v1/login",
+    "SG": "https://client.sg.freefiremobile.com/api/v1/login"
+}
