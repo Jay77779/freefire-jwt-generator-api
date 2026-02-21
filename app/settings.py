@@ -13,3 +13,4 @@ AUTH_URLS = {
     "BR": "https://client.br.freefiremobile.com/api/v1/login",
     "ME": "https://client.me.freefiremobile.com/api/v1/login"
 }
+settings = {"RELEASE_VERSION": RELEASE_VERSION, "MAIN_KEY_B64": MAIN_KEY_B64} 
