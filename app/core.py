@@ -52,8 +52,6 @@ async def get_access_token(client: httpx.AsyncClient, uid: str, password: str) -
         "Connection": "Keep-Alive",
         "Accept-Encoding": "gzip"
     }
-    if not settings.OAUTH_URL.startswith("http"):
-    raise RuntimeError(f"OAUTH_URL is invalid: {settings.OAUTH_URL}")
     
     # Use 'json=payload' for httpx to automatically set the body and Content-Type (though we set it manually above)
     r = await client.post(settings.OAUTH_URL, json=payload, headers=headers, timeout=settings.TIMEOUT)
