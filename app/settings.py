@@ -12,7 +12,7 @@ class Settings:
     MAIN_IV = base64.b64decode("4r/D8vK3/pS+8D2jN5+X/w==")
 
     # Endpoints   https://auth.garena.com/api/v1/login, https://client.ind.freefiremobile.com/api/v1/login
-    OAUTH_URL = " https://client.ind.freefiremobile.com/GetLoginData"
+    OAUTH_URL = "https://client.ind.freefiremobile.com/GetLoginData"
     MAJOR_LOGIN_URL = "https://loginbp.ggpolarbear.com/MajorLogin"
     CLIENT_SECRET_PAYLOAD = "secret_value&client_id=100067"
 
