@@ -11,9 +11,9 @@ class Settings:
     MAIN_KEY = base64.b64decode("G8vK3/pS+8D2jN5+X/8vZw==")
     MAIN_IV = base64.b64decode("4r/D8vK3/pS+8D2jN5+X/w==")
 
-    # Endpoints  https://client.ind.freefiremobile.com/GetLoginData , https://loginbp.ggpolarbear.com/MajorLogin
-    OAUTH_URL = "https://auth.garena.com/api/v1/login"
-    MAJOR_LOGIN_URL = "https://client.ind.freefiremobile.com/api/v1/login"
+    # Endpoints   https://auth.garena.com/api/v1/login, https://client.ind.freefiremobile.com/api/v1/login
+    OAUTH_URL = " https://client.ind.freefiremobile.com/GetLoginData"
+    MAJOR_LOGIN_URL = "https://loginbp.ggpolarbear.com/MajorLogin"
     CLIENT_SECRET_PAYLOAD = "secret_value&client_id=100067"
 
 # This line creates the "settings" object that core.py is trying to import
