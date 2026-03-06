@@ -12,7 +12,7 @@ class Settings:
     MAIN_IV = base64.b64decode("4r/D8vK3/pS+8D2jN5+X/w==")
 
     # Endpoints https://auth.garena.com/api/v1/login  
-    OAUTH_URL = "https://ffmconnect.live.gop.garenanow.com/api/v2/oauth/guest"
+    OAUTH_URL = "https://ffmconnect.live.gop.garenanow.com/api/v2/oauth/login"
     MAJOR_LOGIN_URL = "https://client.ind.freefiremobile.com/api/v2/login"
     CLIENT_SECRET_PAYLOAD = "secret_value&client_id=100067"
 
